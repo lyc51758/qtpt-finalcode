@@ -4,6 +4,9 @@ This repository contains supplementary code for **From Weak Data to Strong Polic
 
 QTPT trains a Transformer to predict history-conditioned action values from offline trajectories. It uses reward and Bellman targets rather than directly imitating the actions in the dataset.
 
+**Authors:** Yichen Lin, Xuyuan Xiong, Xue Wang, Xiangfu Meng, Mike Mingcheng Wei, and Tao Yao  
+**Paper:** [arXiv:2609.30391](https://arxiv.org/abs/2609.30391)
+
 ## Contents
 
 | Directory | Description |
@@ -18,7 +21,13 @@ QTPT trains a Transformer to predict history-conditioned action values from offl
 
 ## Setup
 
-The original experiments use Python, PyTorch, and additional packages listed in `qtpt_core/requirements.txt`. Install a PyTorch build compatible with your system before installing the remaining dependencies. Kitchen and AntMaze additionally require a compatible MuJoCo and D4RL installation.
+The experiments use Python and PyTorch. Install a PyTorch build compatible with your system, then install the dependencies listed in `qtpt_core/requirements.txt`:
+
+```bash
+pip install -r qtpt_core/requirements.txt
+```
+
+Kitchen and AntMaze additionally require a compatible MuJoCo and D4RL installation. The dependency file includes D4RL, which may require a separate environment setup.
 
 ## Running experiments
 
@@ -31,8 +40,21 @@ cd diagnostics/stitching_toy
 python run_stitching_multiseed.py --seeds 0 1 2 3 4 --n-steps 1000
 ```
 
-The commands and their correspondence to every reported paper result are being checked. In particular, the current local environment does not have PyTorch, so the diagnostic command has not yet been verified here. Please consult the paper and the supplementary instructions for each experiment's settings.
+Please consult the paper and the supplementary instructions for the settings used in each experiment.
+
+## Citation
+
+If you find this work useful, please cite:
+
+```bibtex
+@article{lin2026qtpt,
+  title   = {From Weak Data to Strong Policy: Q-Targets Enable Provable In-Context Reinforcement Learning},
+  author  = {Lin, Yichen and Xiong, Xuyuan and Wang, Xue and Meng, Xiangfu and Wei, Mike Mingcheng and Yao, Tao},
+  journal = {arXiv preprint arXiv:2609.30391},
+  year    = {2026}
+}
+```
 
 ## Acknowledgments
 
-The implementation in `qtpt_core/model.py` notes that it is based largely on [in-context-rl/net.py](https://github.com/licong-lin/in-context-rl/blob/main/net.py). Licensing and attribution for this code and other third-party components are being reviewed before public release.
+The implementation in `qtpt_core/model.py` is based on [in-context-rl](https://github.com/licong-lin/in-context-rl).

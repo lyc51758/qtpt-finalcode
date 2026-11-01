@@ -5,9 +5,8 @@ This archive contains the code used for the QTPT experiments in the paper
 "From Weak Data to Strong Policy: Q-Targets Enable Provable In-Context
 Reinforcement Learning".
 
-The package is intended for anonymous review. It excludes generated datasets,
-trained checkpoints, logs, cached files, local machine paths, server-specific
-paths, and personal information.
+The package excludes generated datasets, trained checkpoints, logs, and cached
+files. See the paper for the experimental protocols and reported results.
 
 
 1. Package Structure
@@ -189,6 +188,5 @@ in the paper, including the controlled bandit/Darkroom experiments, Darkroom
 ablations, D4RL Kitchen/AntMaze extensions, and a compact diagnostic stitching
 toy MDP that explains the TD-vs-Monte-Carlo ablation mechanism.
 
-Incomplete exploratory code, result records, notebooks, cached files, trained
-checkpoints, and unrelated experimental branches are intentionally omitted to
-keep the submission compact, anonymous, and reproducible.
+Exploratory code, result records, notebooks, cached files, trained checkpoints,
+and unrelated experimental branches are not included in this package.

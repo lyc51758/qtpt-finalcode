@@ -1,10 +1,11 @@
 # Q-Target Pretrained Transformers (QTPT)
 
+[English](README.md) | [中文](README_zh-CN.md)
+
 This repository contains supplementary code for **From Weak Data to Strong Policy: Q-Targets Enable Provable In-Context Reinforcement Learning** (NeurIPS 2026).
 
 QTPT trains a Transformer to predict history-conditioned action values from offline trajectories. It uses reward and Bellman targets rather than directly imitating the actions in the dataset.
 
-**Authors:** Yichen Lin, Xuyuan Xiong, Xue Wang, Xiangfu Meng, Mike Mingcheng Wei, and Tao Yao  
 **Paper:** [arXiv:2609.30391](https://arxiv.org/abs/2609.30391)
 
 ## Contents
@@ -58,3 +59,7 @@ If you find this work useful, please cite:
 ## Acknowledgments
 
 The implementation in `qtpt_core/model.py` is based on [in-context-rl](https://github.com/licong-lin/in-context-rl).
+
+## License
+
+Contributions by the QTPT authors are available under the [MIT License](LICENSE). This license does not grant rights in third-party material. `qtpt_core/model.py` is based on upstream `in-context-rl/net.py`; no license was found in that upstream repository, so rights to the upstream material require separate clarification.

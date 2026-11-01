@@ -1,0 +1,21 @@
+# QTPT Project Requirements
+
+# Core Dependencies
+torch>=1.12.0
+transformers>=4.20.0
+numpy>=1.21.0
+pandas>=1.3.0
+matplotlib>=3.5.0
+tqdm>=4.64.0
+gym>=0.23.0
+
+# Optional but Recommended
+wandb>=0.13.0          # For experiment tracking
+scipy>=1.7.0           # Scientific computing
+scikit-learn>=1.0.0    # Utility functions
+d4rl                   # Required for D4RL Kitchen/AntMaze experiments
+
+# Note: PyTorch should be installed separately based on your CUDA version:
+# CUDA 11.8: pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+# CUDA 12.1: pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+
